@@ -2,14 +2,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <listeners>
-        <listener class-name="com.thetestingacademy.utils.ScreenShotListener" />
+        <listener class-name="com.aventstack.extentreports.testng.listener.ExtentIReporterSuiteListenerAdapter" />
     </listeners>
     <test verbose="2" preserve-order="true" name="TTA3xSeleniumFramework">
+
         <classes>
             <class name="com.thetestingacademy.web.tests.LoginTest">
                 <methods>
-                    <include name="testLoginNegative"/>
-                    <include name="testLoginPositive"/>
+                    <include name="invalid_loginVWO"/>
+<!--                    <include name="testLoginPositive"/>-->
                 </methods>
             </class>
         </classes>
