@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="com.aventstack.extentreports.testng.listener.ExtentIReporterSuiteListenerAdapter" />
+    </listeners>
+    <test verbose="2" preserve-order="true" name="TTA3xSeleniumFramework">
+
+        <groups>
+            <run>
+                <include name="preprod"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.thetestingacademy.web.tests.LoginTest">
+            </class>
+        </classes>
+    </test>
+</suite>

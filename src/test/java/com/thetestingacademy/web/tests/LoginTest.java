@@ -2,6 +2,7 @@ package com.thetestingacademy.web.tests;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.thetestingacademy.driver.DriverManagerTL;
+import com.thetestingacademy.pages.DashboardPage;
 import com.thetestingacademy.pages.LoginPage;
 import com.thetestingacademy.utils.ProperReader;
 import com.thetestingacademy.web.testbase.TestBase;
@@ -24,7 +25,7 @@ public class LoginTest extends TestBase { // Inheritance
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verify the Valid Credentials are working file")
 //    @Test(groups = {"P0", "negative", }, priority = 1)
-    @Test(groups = {"tagName", "t:another-tagName", "a:authorName", "d:deviceName"})
+    @Test(groups = {"QA"})
     public void invalid_loginVWO(Method method) throws Exception {
         // Navigate, Login to VWO and Assert
         // Abstraction
@@ -44,7 +45,7 @@ public class LoginTest extends TestBase { // Inheritance
                 .isNotBlank().isNotNull().contains(ProperReader.readKey("expected_error"));
 
     }
-//
+
 //    @Severity(SeverityLevel.CRITICAL)
 //    @Description("Verify the Invalid Credentials are working file")
 //    @Test(groups = {"P0", "positive"},priority = 2)
